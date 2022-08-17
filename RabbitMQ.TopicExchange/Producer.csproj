@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Consumer.Ecological\**" />
+    <Compile Remove="Consumer.Red\**" />
+    <Compile Remove="Consumer.Tesla\**" />
+    <EmbeddedResource Remove="Consumer.Ecological\**" />
+    <EmbeddedResource Remove="Consumer.Red\**" />
+    <EmbeddedResource Remove="Consumer.Tesla\**" />
+    <None Remove="Consumer.Ecological\**" />
+    <None Remove="Consumer.Red\**" />
+    <None Remove="Consumer.Tesla\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+  </ItemGroup>
+
+</Project>
