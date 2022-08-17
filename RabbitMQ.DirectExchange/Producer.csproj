@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ConsoleApp1\**" />
+    <Compile Remove="Consumer.All\**" />
+    <Compile Remove="Consumer.Info\**" />
+    <Compile Remove="Consumer.Warning\**" />
+    <EmbeddedResource Remove="ConsoleApp1\**" />
+    <EmbeddedResource Remove="Consumer.All\**" />
+    <EmbeddedResource Remove="Consumer.Info\**" />
+    <EmbeddedResource Remove="Consumer.Warning\**" />
+    <None Remove="ConsoleApp1\**" />
+    <None Remove="Consumer.All\**" />
+    <None Remove="Consumer.Info\**" />
+    <None Remove="Consumer.Warning\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+  </ItemGroup>
+
+</Project>
